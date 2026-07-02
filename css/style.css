@@ -1,0 +1,220 @@
+/* ===== RESET ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0b0b0d;
+    font-family:Roboto,Arial,sans-serif;
+    color:#fff;
+    min-height:100vh;
+}
+
+.wrapper{
+    max-width:720px;
+    margin:40px auto;
+    padding:20px;
+}
+
+.card{
+    background:#17171d;
+    border:1px solid #303038;
+    border-radius:22px;
+    padding:28px;
+    margin-bottom:30px;
+    box-shadow:0 15px 40px rgba(0,0,0,.45);
+}
+
+h1{
+    color:#ff5964;
+    text-align:center;
+    font-size:42px;
+    font-weight:900;
+    letter-spacing:3px;
+    margin-bottom:25px;
+}
+
+.form-group{
+    margin-bottom:24px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.red{color:#ff5b66;}
+.yellow{color:#ffc400;}
+.blue{color:#45a5ff;}
+.green{color:#00d26f;}
+.purple{color:#c15dff;}
+.orange{color:#ff8c2a;}
+
+select,
+input,
+textarea{
+
+    width:100%;
+    background:#2d2d33;
+    color:#fff;
+
+    border:none;
+    border-radius:15px;
+
+    padding:16px 18px;
+
+    font-size:18px;
+
+    transition:.25s;
+
+}
+
+.red+select,
+.red+input{
+    border:2px solid #ff5b66;
+}
+
+.yellow+select,
+.yellow+input{
+    border:2px solid #ffc400;
+}
+
+.blue+select,
+.blue+input{
+    border:2px solid #45a5ff;
+}
+
+.green+select,
+.green+input{
+    border:2px solid #00d26f;
+}
+
+.purple+select,
+.purple+input{
+    border:2px solid #c15dff;
+}
+
+.orange+select,
+.orange+input{
+    border:2px solid #ff8c2a;
+}
+
+select:focus,
+input:focus,
+textarea:focus{
+
+    outline:none;
+    transform:scale(1.01);
+
+}
+
+.buttonRow{
+
+    display:flex;
+    gap:18px;
+    margin-top:25px;
+
+}
+
+.btn{
+
+    flex:1;
+
+    border:none;
+
+    border-radius:15px;
+
+    height:60px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+.btnRed{
+
+    background:#e31922;
+
+    color:white;
+
+}
+
+.btnGrey{
+
+    background:#34343a;
+
+    color:white;
+
+}
+
+.btnDark{
+
+    width:100%;
+
+    margin-top:18px;
+
+    background:#2b2b31;
+
+    color:white;
+
+    height:60px;
+
+}
+
+.btn:hover{
+
+    opacity:.9;
+
+}
+
+.subtitle{
+
+    color:#9d9da8;
+
+    margin-bottom:10px;
+
+}
+
+#requestLog{
+
+    margin-top:25px;
+
+    min-height:120px;
+
+    border:2px dashed #3d3d44;
+
+    border-radius:15px;
+
+    padding:15px;
+
+}
+
+@media(max-width:700px){
+
+.buttonRow{
+
+flex-direction:column;
+
+}
+
+.card{
+
+padding:20px;
+
+}
+
+h1{
+
+font-size:32px;
+
+}
+
+}
