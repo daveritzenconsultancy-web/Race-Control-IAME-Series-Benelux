@@ -1,27 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>IAME Series Benelux Race Control</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="css/style.css">
+    <title>Race Control Request</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<div id="app">
+<div class="wrapper">
+
+    <section class="card">
+
+        <h1>NEW REQUEST</h1>
+
+        <div class="form-group">
+
+            <label class="red">
+                REQUEST FROM
+            </label>
+
+            <select id="requestFrom">
+
+                <option>Select official...</option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label class="yellow">
+                REQUEST FOR
+            </label>
+
+            <select id="requestFor">
+
+                <option>Select recipient...</option>
+
+            </select>
+
+        </div>
+
+        <div class="row">
+
+            <div class="form-group half">
+
+                <label class="blue">
+                    HEAT
+                </label>
+
+                <select>
+
+                    <option>Heat A-B</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group half">
+
+                <label class="green">
+                    LAP
+                </label>
+
+                <input
+                        type="number"
+                        placeholder="0">
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="form-group half">
+
+                <label class="purple">
+                    TIME
+                </label>
+
+                <input type="time">
+
+            </div>
+
+            <div class="form-group half">
+
+                <label class="orange">
+                    POST
+                </label>
+
+                <select>
+
+                    <option>Marshal Post 1</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <div class="form-group">
+
+            <label class="red">
+                RACE NUMBER(S)
+            </label>
+
+            <input
+                    type="text"
+                    placeholder="e.g. 201, 315">
+
+        </div>
+
+        <div class="form-group">
+
+            <label class="yellow">
+                SITUATION
+            </label>
+
+            <textarea
+                    rows="5"
+                    placeholder="Describe the request..."></textarea>
+
+        </div>
+
+        <div class="buttonRow">
+
+            <button class="btn btnRed">
+
+                SUBMIT
+
+            </button>
+
+            <button class="btn btnGrey">
+
+                GO TO WHATSAPP
+
+            </button>
+
+        </div>
+
+        <button class="btn btnDark">
+
+            NEW REQUEST
+
+        </button>
+
+    </section>
+
+    <section class="card">
+
+        <h2>
+            REQUEST LOG
+        </h2>
+
+        <p class="subtitle">
+
+            Submitted requests will appear here.
+
+        </p>
+
+        <div id="requestLog">
+
+        </div>
+
+    </section>
 
 </div>
 
 <script src="js/script.js"></script>
 
 </body>
+
 </html>
