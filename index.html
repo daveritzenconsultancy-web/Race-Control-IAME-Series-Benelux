@@ -1,183 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Race Control Request</title>
 
-    <link rel="stylesheet" href="css/style.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
 <div class="wrapper">
 
-    <section class="card">
+    <div class="card">
 
         <h1>NEW REQUEST</h1>
 
-        <div class="form-group">
+        <form id="requestForm">
 
-            <label class="red">
-                REQUEST FROM
-            </label>
-
-            <select id="requestFrom">
-
-                <option>Select official...</option>
-
-            </select>
-
-        </div>
-
-        <div class="form-group">
-
-            <label class="yellow">
-                REQUEST FOR
-            </label>
-
-            <select id="requestFor">
-
-                <option>Select recipient...</option>
-
-            </select>
-
-        </div>
-
-        <div class="row">
-
-            <div class="form-group half">
-
-                <label class="blue">
-                    HEAT
-                </label>
-
-                <select>
-
-                    <option>Heat A-B</option>
-
+            <div class="form-group">
+                <label class="red">REQUEST FROM</label>
+                <select id="requestFrom">
+                    <option value="">Select...</option>
                 </select>
-
             </div>
 
-            <div class="form-group half">
-
-                <label class="green">
-                    LAP
-                </label>
-
-                <input
-                        type="number"
-                        placeholder="0">
-
-            </div>
-
-        </div>
-
-        <div class="row">
-
-            <div class="form-group half">
-
-                <label class="purple">
-                    TIME
-                </label>
-
-                <input type="time">
-
-            </div>
-
-            <div class="form-group half">
-
-                <label class="orange">
-                    POST
-                </label>
-
-                <select>
-
-                    <option>Marshal Post 1</option>
-
+            <div class="form-group">
+                <label class="yellow">REQUEST FOR</label>
+                <select id="requestFor">
+                    <option value="">Select...</option>
                 </select>
+            </div>
+
+            <div class="row">
+
+                <div class="form-group half">
+                    <label class="blue">HEAT</label>
+                    <select id="heat">
+                        <option>Heat A-B</option>
+                        <option>Heat C-D</option>
+                        <option>Final</option>
+                    </select>
+                </div>
+
+                <div class="form-group half">
+                    <label class="green">LAP</label>
+                    <input type="number" id="lap" placeholder="Lap">
+                </div>
 
             </div>
 
-        </div>
+            <div class="row">
 
-        <div class="form-group">
+                <div class="form-group half">
+                    <label class="purple">TIME</label>
+                    <input type="time" id="time">
+                </div>
 
-            <label class="red">
-                RACE NUMBER(S)
-            </label>
+                <div class="form-group half">
+                    <label class="orange">POST</label>
+                    <select id="post">
+                        <option>Post 1</option>
+                        <option>Post 2</option>
+                        <option>Post 3</option>
+                        <option>Post 4</option>
+                        <option>Post 5</option>
+                    </select>
+                </div>
 
-            <input
-                    type="text"
-                    placeholder="e.g. 201, 315">
+            </div>
 
-        </div>
+            <div class="form-group">
+                <label class="red">RACE NUMBER(S)</label>
+                <input type="text" id="numbers" placeholder="e.g. 201,315">
+            </div>
 
-        <div class="form-group">
+            <div class="form-group">
+                <label class="yellow">REQUEST TYPE</label>
+                <select id="requestType">
+                    <option>Investigation</option>
+                    <option>Black / White Flag</option>
+                    <option>Penalty</option>
+                    <option>Technical</option>
+                    <option>Track Inspection</option>
+                    <option>Other</option>
+                </select>
+            </div>
 
-            <label class="yellow">
-                SITUATION
-            </label>
+            <div class="form-group">
+                <label class="blue">REQUEST</label>
+                <textarea id="request" rows="6" placeholder="Describe the request..."></textarea>
+            </div>
 
-            <textarea
-                    rows="5"
-                    placeholder="Describe the request..."></textarea>
+            <div class="buttonRow">
+                <button type="submit" class="btn btnRed">SUBMIT</button>
+                <button type="button" class="btn btnGrey" id="whatsappButton">
+                    GO TO WHATSAPP
+                </button>
+            </div>
 
-        </div>
-
-        <div class="buttonRow">
-
-            <button class="btn btnRed">
-
-                SUBMIT
-
+            <button type="reset" class="btn btnDark">
+                NEW REQUEST
             </button>
 
-            <button class="btn btnGrey">
+        </form>
 
-                GO TO WHATSAPP
+    </div>
 
-            </button>
+    <div class="card">
 
-        </div>
-
-        <button class="btn btnDark">
-
-            NEW REQUEST
-
-        </button>
-
-    </section>
-
-    <section class="card">
-
-        <h2>
-            REQUEST LOG
-        </h2>
+        <h2>REQUEST LOG</h2>
 
         <p class="subtitle">
-
             Submitted requests will appear here.
-
         </p>
 
-        <div id="requestLog">
+        <div id="requestLog"></div>
 
-        </div>
-
-    </section>
+    </div>
 
 </div>
 
 <script src="js/script.js"></script>
 
 </body>
-
 </html>
